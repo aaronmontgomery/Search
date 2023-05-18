@@ -1,0 +1,65 @@
+<div>
+    <h2>{{title}}</h2>
+    
+    <span *ngFor="let item of forecasts; index as i;">
+        <img *ngIf="i<1" [src]="item.weather[0].iconUrl" />
+    </span>
+
+    <span>
+        <span>{{currentWeatherByLatLon.main.temp}}</span>
+    </span>
+
+    <span>
+        <span *ngFor="let item of currentWeatherByLatLon.weather; index as i;">
+            <span *ngIf="i<1">
+                {{item.main}}
+            </span>
+        </span>
+    </span>
+
+    <span *ngFor="let item of currentWeatherByLatLon.weather; index as i;">
+        <span *ngIf="i<1">
+            <span *ngIf="forecasts[0].pop === -1; else popDefined">
+                Undefined
+            </span>
+            <ng-template #popDefined>
+                {{forecasts[0].pop}}
+            </ng-template>
+        </span>
+    </span>
+
+    <div>
+        <div *ngFor="let forecast of forecasts; index as i;" class="forecast">
+
+            <div>
+                {{forecast.dt_txt}}
+            </div>
+            
+            <div>
+                <div *ngFor="let weather of forecast.weather; index as j;">
+                    <div>
+                        <span *ngIf="j == forecast.weather.length - 1">
+                            <div>
+                                <img [src]="weather.iconUrl" />
+                            </div>
+                            <div>
+                                <span>
+                                    {{weather.main}}
+                                </span>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                {{forecast.main.temp_max}}
+            </div>
+
+            <div>
+                {{forecast.main.temp_min}}
+            </div>
+
+        </div>
+    </div>
+</div>

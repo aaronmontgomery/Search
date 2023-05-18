@@ -1,0 +1,10 @@
+<div class="search-container">
+    <label for="searchInputContainer" class="search-icon-container">
+        <img class="search-icon" src="../../assets/seo-social-web-network-internet_340_icon-icons.com_61497.svg" alt="Search Icon">
+    </label>
+    <div class="search-input-container" id="searchInputContainer" name="searchInputContainer">
+        <input class="search-input" type="text" placeholder="Search" [(ngModel)]="searchValue" (ngModelChange)="onSearchValueChanged($event)">
+    </div>
+</div>
+
+<app-search-results [searchValue]="searchValue"></app-search-results>

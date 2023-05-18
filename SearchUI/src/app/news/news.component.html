@@ -1,0 +1,12 @@
+<div>
+    <h2>Top Stories</h2>
+    
+    <div *ngFor="let item of news.articles; index as i;">
+        <div *ngIf="i<4">
+            <div class="headline">
+                <h4>{{news.articles[i].source.name}}</h4>
+                <p>{{news.articles[i].title}}</p>
+            </div>
+        </div>
+    </div>
+</div>

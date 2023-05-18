@@ -1,0 +1,49 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:9598",
+      "sslPort": 44314
+    }
+  },
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5091",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7023;http://localhost:5091",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "WeatherApiSettingsBaseUrl": "https://api.openweathermap.org",
+        "WeatherApiSettingsApiKey": "d14587eb44fee00638f7cbd0d56993e3",
+        "WeatherApiSettingsDefaultHeaderUserAgentKey": "User-Agent",
+        "WeatherApiSettingsDefaultHeaderUserAgentValue": "(Aaron Montgomery, aaronmontgomery1989@outlook.com)",
+        "NewsApiSettingsBaseUrl": "https://newsapi.org",
+        "NewsApiSettingsApiKey": "d6100486841e4ea1994f65c8d69b78ff",
+        "NewsApiSettingsDefaultHeaderUserAgentKey": "User-Agent",
+        "NewsApiSettingsDefaultHeaderUserAgentValue": "(Aaron Montgomery, aaronmontgomery1989@outlook.com)"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
